@@ -116,6 +116,8 @@ Useful Commands Reference :
    terraform destroy
    docker ps
 
+
+
 <img width="1366" height="768" alt="Task3 -1" src="https://github.com/user-attachments/assets/aa5f6e46-2796-4b70-998e-136a4ce57cc4" />
 
 
