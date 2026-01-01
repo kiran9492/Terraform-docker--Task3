@@ -1,81 +1,105 @@
-Terraform-Based Docker Container Provisioning
+# Terraform-Based Docker Container Provisioning
 
- Project Overview :
+# Project Overview :
 This project demonstrates how to **provision and manage a local Docker container using Terraform**.  
+
 The infrastructure is defined using **Terraform configuration files** and executed through **Bash commands**, showcasing the concept of **Infrastructure as Code (IaC)**.
 
 By using Terraform, Docker resources such as images and containers are created, managed, and destroyed in an automated and repeatable manner.
 
 ---
 
-  Objective :
+ # Objective :
 - Provision a **local Docker container** using Terraform
+  
 - Automate Docker image pulling and container creation
+  
 - Execute infrastructure provisioning using Bash commands
+  
 - Understand Terraform provider configuration and resource lifecycle
 
 ---
 
- 🛠 Tools & Technologies
+ # 🛠 Tools & Technologies
 | Tool | Purpose |
 |----|----|
 | Terraform | Infrastructure provisioning |
+
 | Docker | Container runtime |
+
 | Bash | Command-line execution |
+
 | Docker Hub | Image repository |
 
 ---
 
- Project Structure :
+# Project Structure :
     terraform-docker/
+    
     │
     ├── main.tf # Terraform configuration file
+    
     └── README.md # Project documentation
 
-Terraform Configuration Details :
-The `main.tf` file includes:
+# Terraform Configuration Details :
+## The `main.tf` file includes:
 - Terraform block to define required providers
+  
 - Docker provider configuration
+  
 - Docker image resource to pull the Nginx image
+  
 - Docker container resource with port mapping
 
-Terraform automatically handles dependencies between resources, ensuring the Docker image is pulled before creating the container.
+## Terraform automatically handles dependencies between resources, ensuring the Docker image is pulled before creating the container.
 
-Prerequisites :
- Ensure the following are installed on your system:
+# Prerequisites :
+
+ ## Ensure the following are installed on your system:
+ 
    - Docker (Docker Desktop or Docker Engine)
+     
    - Terraform
+     
    - Bash-compatible terminal (Linux / macOS / Git Bash / WSL)
 
- Verify installations:
-```bash
+# Verify installations:
+
 docker --version
+
 terraform --version
 
-Execution Steps:
+# Execution Steps:
  Step 1: Initialize Terraform
    Initializes the working directory and downloads required provider plugins.
+  
   -terraform init
 
-Step 2: Validate Configuration
+## Step 2: Validate Configuration
   Checks the Terraform configuration for syntax and logical errors.
+  
   -terraform validate
 
-Step 3: Plan Infrastructure
+## Step 3: Plan Infrastructure
   Displays a preview of resources Terraform will create.
+  
   -terraform plan
 
-Step 4: Apply Configuration
+## Step 4: Apply Configuration
   Creates Docker image and container as defined in main.tf.
+  
   -terraform apply
 
-Step 5: Verify Docker Container
+## Step 5: Verify Docker Container
   Check running containers:
+  
   -docker ps
+  
 Access the application in a browser:
+
    -Localhost:8080
 
-Sample Execution Logs:
+## Sample Execution Logs:
      Initializing provider plugins...
      Terraform has been successfully initialized!
 
@@ -86,9 +110,9 @@ Sample Execution Logs:
 
      Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
-Terraform Resource Lifecycle
+# Terraform Resource Lifecycle
 
-Terraform manages infrastructure through the following lifecycle:
+## Terraform manages infrastructure through the following lifecycle:
 
  1. Init – Provider initialization
 
@@ -98,7 +122,7 @@ Terraform manages infrastructure through the following lifecycle:
 
  4. Destroy – Resource deletion
 
-Outcome:
+## Outcome:
 
    1. Docker image successfully pulled from Docker Hub
 
@@ -108,7 +132,7 @@ Outcome:
 
    4. Infrastructure automated using IaC principles
 
-Useful Commands Reference :
+# Useful Commands Reference :
    terraform init
    terraform validate
    terraform plan
