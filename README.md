@@ -194,4 +194,4 @@ Access the application in a browser:
 
 
 
-<img width="1366" height="768" alt="Task3-5" src="https://github.com/user-attachments/assets/83a496d7-1ab1-4553-9c72-0453afa56c39" />
+
